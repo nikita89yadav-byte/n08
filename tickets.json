@@ -1,0 +1,20 @@
+[
+  {
+    "ticket_id": "TKT-10001",
+    "event_id": "EVT1001",
+    "section": "A",
+    "row": 1,
+    "seat": 1,
+    "price": 7500,
+    "status": "available"
+  },
+  {
+    "ticket_id": "TKT-10002",
+    "event_id": "EVT1001",
+    "section": "A",
+    "row": 1,
+    "seat": 2,
+    "price": 7500,
+    "status": "available"
+  }
+]
