@@ -1,0 +1,14 @@
+[
+  {
+    "venue_id": "V001",
+    "name": "DY Patil Stadium",
+    "city": "Mumbai",
+    "capacity": 45000
+  },
+  {
+    "venue_id": "V002",
+    "name": "Bangalore Palace Grounds",
+    "city": "Bengaluru",
+    "capacity": 30000
+  }
+]
