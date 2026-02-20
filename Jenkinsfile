@@ -14,11 +14,14 @@ pipeline {
                 sh '''
                 scp -o StrictHostKeyChecking=no \
                 -i /var/lib/jenkins/.ssh/devo.pem \
-                index-aws.html ubuntu@3.88.55.18:/var/www/html/index.html
+                index-aws.html ubuntu@3.88.55.18:/tmp/index.html
 
                 ssh -o StrictHostKeyChecking=no \
                 -i /var/lib/jenkins/.ssh/devo.pem \
-                ubuntu@3.88.55.18 "sudo systemctl restart nginx"
+                ubuntu@3.88.55.18 "
+                  sudo mv /tmp/index.html /var/www/html/index.html &&
+                  sudo systemctl restart nginx
+                "
                 '''
             }
         }
@@ -28,11 +31,14 @@ pipeline {
                 sh '''
                 scp -o StrictHostKeyChecking=no \
                 -i /var/lib/jenkins/.ssh/Proj1vm_key.pem \
-                index-azure.html azureuser@172.174.130.148:/var/www/html/index.html
+                index-azure.html azureuser@172.174.130.148:/tmp/index.html
 
                 ssh -o StrictHostKeyChecking=no \
                 -i /var/lib/jenkins/.ssh/Proj1vm_key.pem \
-                azureuser@172.174.130.148 "sudo systemctl restart nginx"
+                azureuser@172.174.130.148 "
+                  sudo mv /tmp/index.html /var/www/html/index.html &&
+                  sudo systemctl restart nginx
+                "
                 '''
             }
         }
